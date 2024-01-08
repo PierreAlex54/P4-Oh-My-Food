@@ -1,0 +1,100 @@
+
+
+// general
+
+* {
+    font-family: "roboto", sans-serif;
+}
+
+:root {
+    --bg-white: white;
+    --main-bg-color: #f6f6f6;
+    --light-grey: #eaeaea;
+    --dark-grey: #353535;
+
+    --button-gradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+    --button-text-white: white;
+}
+
+body {
+    margin: 0;
+}
+
+// HEADER
+.logo {
+    position: relative;
+    background-color: var(--bg-white);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  h1 {
+    font-family: "shrikhand", serif;
+    font-size: 30px;
+    margin: 0;
+    padding: 8px 0 2px 0;
+    text-align: center;
+  }
+  
+  header .location {
+    background-color: var(--light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    & h2 {
+      color: var(--dark-grey);
+      font-size: 16px;
+    }
+    & i {
+      color: var(--dark-grey);
+    }
+  }
+  
+//   SECTION RESERVATION
+
+.reservation {
+    background: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.reservation h3 {
+    max-width: 50%;
+    font-size: 24px;
+    margin: 0;
+}
+
+.reservation p {
+    max-width: 70%;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--dark-grey);
+    margin: 10px 0 30px 0;
+}
+
+.reservation .btn {
+    margin-bottom: 15px;
+}
+
+// BOUTON
+
+.btn {
+    color: var(--button-text-white);
+    background: var(--button-gradient);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 500ms;
+
+}
+
+.btn:hover {
+    opacity: 0.9;
+    box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.25);
+}
