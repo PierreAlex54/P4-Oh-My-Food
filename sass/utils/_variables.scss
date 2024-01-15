@@ -1,0 +1,18 @@
+:root {
+  --bg-white: white;
+  --main-bg-color: #f6f6f6;
+  --light-grey: #eaeaea;
+  --dark-grey: #353535;
+  --icon-grey: #7e7e7e;
+  --primary: #9356dc;
+  --second: #ff79da;
+  --tert: #99e2d0;
+  --green-font: #008766;
+
+  --button-gradient: linear-gradient(
+    193deg,
+    var(--primary) -11.44%,
+    var(--second) 123.93%
+  );
+  --button-text: white;
+}
