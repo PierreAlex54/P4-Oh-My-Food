@@ -306,6 +306,9 @@ footer i.fa-handshake-angle {
   width: 100%;
   position: relative;
   z-index: 1;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .restau-menu {
@@ -328,7 +331,7 @@ footer i.fa-handshake-angle {
 .restau-name h2 {
   font-family: "shrikhand", serif;
   font-size: 28px;
-  padding-right: 30px;
+  padding-right: 40px;
 }
 @media screen and (min-width: 767px) {
   .restau-name h2 {
@@ -370,9 +373,14 @@ footer i.fa-handshake-angle {
 .menu-components h3 {
   font-size: 15px;
   font-weight: 300;
+  margin-bottom: 0;
 }
-.menu-components h3 span {
-  border-bottom: 3px solid var(--tert);
+.menu-components hr {
+  margin: 3px 0 15px 0;
+  border-style: solid;
+  border-width: 2px;
+  color: var(--tert);
+  width: 35px;
 }
 
 .dishes {
@@ -456,6 +464,10 @@ footer i.fa-handshake-angle {
 
 .appear-slide-3 {
   animation: appear-slide 500ms 500ms backwards;
+}
+
+.appear-slide-4 {
+  animation: appear-slide 500ms 600ms backwards;
 }
 
 @keyframes appear-slide {

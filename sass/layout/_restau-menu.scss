@@ -21,7 +21,7 @@
     & h2 {
         font-family: "shrikhand", serif;
         font-size: 28px;
-        padding-right: 30px;
+        padding-right: 40px;
         @include tablet-desktop {
             display: flex;
             justify-content: center;
@@ -52,9 +52,14 @@
     & h3 {
         font-size: 15px;
         font-weight: 300;
-        & span {
-            border-bottom: 3px solid var(--tert);
-        }
+        margin-bottom: 0;
+    }
+    & hr {
+        margin: 3px 0 15px 0;
+        border-style: solid;
+        border-width: 2px;
+        color: var(--tert);
+        width: 35px;
     }
 }
 
@@ -138,6 +143,9 @@
 }
 .appear-slide-3 {
     animation: appear-slide 500ms 500ms backwards;
+}
+.appear-slide-4 {
+    animation: appear-slide 500ms 600ms backwards;
 }
 
 @keyframes appear-slide {
