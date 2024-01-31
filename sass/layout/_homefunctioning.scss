@@ -1,3 +1,6 @@
+@import '../utils/mixins';
+@import '../utils/mediaq';
+
 .functioning {
     padding: 20px 20px 60px 20px;
 }
@@ -7,6 +10,12 @@
     flex-direction: column;
     margin-left: 10px;
     gap: 25px;
+    @include tablet {
+        align-items: center;
+    }
+    @include desktop {
+        flex-direction: row;
+    }
     & i {
         color: var(--icon-grey) ;
         font-size: 1.4rem;
@@ -41,7 +50,8 @@
 
 .funct-text {
     background: var(--main-bg-color);
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    @include box-shadow;
+    // box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     padding: 1.5rem 1rem 1.5rem 5rem;
     border-radius: 1rem;
     font-size: 16px;

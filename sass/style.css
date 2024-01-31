@@ -1,3 +1,11 @@
+header {
+  position: relative;
+  width: 100%;
+}
+header i {
+  color: var(--dark-grey);
+}
+
 .logo {
   position: relative;
   background-color: var(--bg-white);
@@ -11,6 +19,11 @@ h1 {
   padding: 8px 0 2px 0;
   text-align: center;
 }
+@media screen and (min-width: 1040px) {
+  h1 {
+    padding: 20px 0;
+  }
+}
 
 header .location {
   background-color: var(--light-grey);
@@ -23,13 +36,16 @@ header .location h2 {
   color: var(--dark-grey);
   font-size: 16px;
 }
-header .location i {
-  color: var(--dark-grey);
-}
 
 #home-header {
-  position: relative;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#restau-header i {
+  position: absolute;
+  left: 2rem;
+  top: 35%;
+  font-size: 25px;
 }
 
 footer {
@@ -59,6 +75,18 @@ footer i {
 footer i.fa-handshake-angle {
   font-size: 0.9rem;
 }
+@media screen and (min-width: 1040px) {
+  footer {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 2.5rem;
+    padding: 4rem 4rem 1rem;
+  }
+  footer h5 {
+    order: 1;
+  }
+}
 
 .foot-icontext {
   display: flex;
@@ -73,6 +101,11 @@ footer i.fa-handshake-angle {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+@media screen and (min-width: 1040px) {
+  .foot-links-1, .foot-links-2 {
+    flex-direction: row;
+  }
 }
 
 .reservation {
@@ -108,6 +141,16 @@ footer i.fa-handshake-angle {
   flex-direction: column;
   margin-left: 10px;
   gap: 25px;
+}
+@media screen and (min-width: 767px) and (max-width: 1040px) {
+  .funct-strip {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1040px) {
+  .funct-strip {
+    flex-direction: row;
+  }
 }
 .funct-strip i {
   color: var(--icon-grey);
@@ -162,9 +205,21 @@ footer i.fa-handshake-angle {
   width: auto;
   gap: 1.5rem;
 }
+@media screen and (min-width: 767px) {
+  .restaurants-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .restaurants-list a {
   text-decoration: none;
   color: inherit;
+}
+@media screen and (min-width: 767px) {
+  .restaurants-list a {
+    width: 48%;
+  }
 }
 
 .restaurants-cards {
@@ -247,6 +302,182 @@ footer i.fa-handshake-angle {
   font-family: "roboto", sans-serif;
 }
 
+.restau-img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.restau-menu {
+  background-color: var(--main-bg-color);
+  border-radius: 2rem 2rem 0 0;
+  position: relative;
+  margin-top: -5rem;
+  z-index: 2;
+  padding-top: 1rem;
+  max-width: 1055px;
+  margin-inline: auto;
+}
+
+.restau-name {
+  position: relative;
+  padding: 0 17px;
+  max-width: 604px;
+  margin-inline: auto;
+}
+.restau-name h2 {
+  font-family: "shrikhand", serif;
+  font-size: 28px;
+  padding-right: 30px;
+}
+@media screen and (min-width: 767px) {
+  .restau-name h2 {
+    display: flex;
+    justify-content: center;
+  }
+}
+.restau-name i {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 0.55rem;
+}
+@media screen and (min-width: 767px) {
+  .restau-name i {
+    right: 10.5rem;
+  }
+}
+.restau-name .fa-solid {
+  color: transparent;
+  background-image: var(--button-gradient);
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: 500ms;
+  opacity: 0;
+}
+.restau-name .fa-solid:hover {
+  opacity: 1;
+}
+
+.menu-components {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 604px;
+  margin-inline: auto;
+}
+.menu-components h3 {
+  font-size: 15px;
+  font-weight: 300;
+}
+.menu-components h3 span {
+  border-bottom: 3px solid var(--tert);
+}
+
+.dishes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dish {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg-white);
+  border-radius: 1rem;
+  padding: 15px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  overflow: hidden;
+}
+.dish:hover .price-checkbox {
+  transform: translateX(-65px);
+}
+.dish:hover .dish-text {
+  width: calc(100% - 90px);
+}
+
+.dish-text {
+  text-wrap: nowrap;
+  overflow: hidden;
+  transition: width 400ms;
+}
+.dish-text h4 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+.dish-text p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 15px;
+}
+.dish-text h4, .dish-text p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: -80px;
+  transition: transform 400ms;
+}
+.price-checkbox p {
+  margin: 0;
+  padding-top: 1.3rem;
+  font-weight: 700;
+  font-size: 15px;
+}
+.price-checkbox .check-box {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--tert);
+  width: 4rem;
+  height: calc(100% + 30px);
+}
+.price-checkbox i {
+  color: var(--tert);
+  background-color: var(--bg-white);
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.appear-slide-1 {
+  animation: appear-slide 500ms 300ms backwards;
+}
+
+.appear-slide-2 {
+  animation: appear-slide 500ms 400ms backwards;
+}
+
+.appear-slide-3 {
+  animation: appear-slide 500ms 500ms backwards;
+}
+
+@keyframes appear-slide {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+.commander {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.commander p {
+  width: 186px;
+  text-align: center;
+}
+
 :root {
   --bg-white: white;
   --main-bg-color: #f6f6f6;
@@ -265,42 +496,6 @@ footer i.fa-handshake-angle {
   --button-text: white;
 }
 
-@media screen and (min-width: 767px) {
-  .restaurants-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .restaurants-list a {
-    width: 48%;
-  }
-}
-@media screen and (min-width: 767px) and (max-width: 1039px) {
-  .funct-strip {
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1040px) {
-  h1 {
-    padding: 20px 0;
-  }
-  .funct-strip {
-    flex-direction: row;
-  }
-  footer {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: baseline;
-    gap: 2.5rem;
-    padding: 4rem 4rem 1rem;
-  }
-  footer h5 {
-    order: 1;
-  }
-  .foot-links-1, .foot-links-2 {
-    flex-direction: row;
-  }
-}
 body {
   margin: 0;
   display: flex;
@@ -308,10 +503,15 @@ body {
 }
 
 .main-container {
-  max-width: 1440px;
   width: 100%;
 }
 
-.main-container h3 {
+#home-main h3 {
   font-size: 24px;
+}
+
+.margin-desktop {
+  max-width: 1080px;
+  margin-inline: auto;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

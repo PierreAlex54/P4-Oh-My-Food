@@ -1,3 +1,5 @@
+@import '../utils/mediaq';
+
 footer {
     background-color: var(--dark-grey);
     color: var(--button-text);
@@ -24,6 +26,16 @@ footer {
             font-size: 0.9rem;
         }
     }
+    @include desktop {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: baseline;
+        gap: 2.5rem;
+        padding: 4rem 4rem 1rem;
+        & h5 {
+            order: 1;        
+        }
+    }
 }
 
 .foot-icontext {
@@ -39,4 +51,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    @include desktop {
+        flex-direction: row;
+    }
 }

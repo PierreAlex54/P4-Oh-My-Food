@@ -1,3 +1,6 @@
+@import '../utils/mixins';
+@import '../utils/mediaq';
+
 .restaurants-choice {
     background-color: var(--main-bg-color);
     display: flex;
@@ -10,10 +13,19 @@
     flex-direction: column;
     width: auto;
     gap: 1.5rem;
+    @include tablet-desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
     & a {
         text-decoration: none;
         color: inherit;
+        @include tablet-desktop {
+            width: 48%; 
+        }
     }
+    
 }
 
 .restaurants-cards {
@@ -63,13 +75,6 @@
         top: 0.5rem;
     }
     & .fa-solid {
-        color: transparent;
-        background-image: var(--button-gradient);
-        background-clip: text;
-        transition: 500ms;
-        opacity: 0;
-        &:hover {
-            opacity: 1;
-        }
+        @include heart-transition;
     }
 }
