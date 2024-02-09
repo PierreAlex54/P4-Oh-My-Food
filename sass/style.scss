@@ -1,3 +1,4 @@
+@use "./layout/loader";
 @use "./layout/_header";
 @use "./layout/_footer";
 @use "./layout/_homereservation";
@@ -8,28 +9,25 @@
 @use "./layout/restau-img";
 @use "./layout/restau-menu";
 @import "./utils/_variables";
-@import "./utils/mixins";
-@import "./utils/mediaq";
-
 
 // general
 
 body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .main-container {
-    width: 100%;
+  width: 100%;
 }
 
 #home-main h3 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .margin-desktop {
-    max-width: 1080px;
-    margin-inline: auto;
-    width: 100%;
+  max-width: 1080px;
+  margin-inline: auto;
+  width: 100%;
 }

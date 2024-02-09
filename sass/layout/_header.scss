@@ -1,4 +1,4 @@
-@import '../utils/mediaq';
+@import "../utils/mediaq";
 
 header {
   position: relative;
@@ -7,7 +7,6 @@ header {
     color: var(--dark-grey);
   }
 }
-
 
 .logo {
   position: relative;
@@ -32,12 +31,11 @@ header .location {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  
+
   & h2 {
     color: var(--dark-grey);
     font-size: 16px;
   }
-  
 }
 
 #home-header {
@@ -45,8 +43,8 @@ header .location {
 }
 
 #restau-header i {
-position: absolute;
-left: 2rem;
-top: 35%;
-font-size: 25px;
+  position: absolute;
+  left: 2rem;
+  top: 35%;
+  font-size: 25px;
 }

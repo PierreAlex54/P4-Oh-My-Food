@@ -1,17 +1,18 @@
+// Les différents breakpoints pour les média-queries
 @mixin tablet {
-    @media screen and (min-width: 767px) and (max-width: 1040px) {
-        @content;
-    }
+  @media screen and (min-width: 767px) and (max-width: 1040px) {
+    @content;
+  }
 }
 
 @mixin tablet-desktop {
-    @media screen and (min-width: 767px) {
-        @content;
-    }
+  @media screen and (min-width: 767px) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media screen and (min-width: 1040px) {
-        @content;
-    }
+  @media screen and (min-width: 1040px) {
+    @content;
+  }
 }

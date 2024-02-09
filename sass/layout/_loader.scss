@@ -1,0 +1,139 @@
+.loader-page {
+  background: white;
+  position: fixed;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  animation: end-loader 1s 3s forwards;
+  & i {
+    position: absolute;
+    font-size: 80px;
+    color: white;
+    animation: size-colors 2.5s cubic-bezier(0, 0, 0.65, 1.04) infinite;
+  }
+  & .p1,
+  .p2 {
+    position: absolute;
+    font-family: "Shrikhand";
+    font-size: x-large;
+  }
+  & .p1 {
+    top: 250px;
+  }
+  & .p2 {
+    bottom: 250px;
+  }
+}
+
+.loader {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  animation: rotation 2.5s ease infinite;
+
+  & .circle-1 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    position: absolute;
+    top: 30px;
+    right: -105px;
+    animation: circle-slide-1 2.5s ease infinite;
+  }
+  & .circle-2 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--second);
+    position: absolute;
+    left: -105px;
+    top: 30px;
+    animation: circle-slide-2 2.5s ease infinite;
+  }
+  & .circle-3 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--tert);
+    position: absolute;
+    top: -120px;
+    animation: circle-slide-3 2.5s ease infinite;
+  }
+}
+
+@keyframes circle-slide-1 {
+  0% {
+  }
+  50% {
+    top: -20px;
+    right: -20px;
+  }
+  100% {
+  }
+}
+@keyframes circle-slide-2 {
+  0% {
+  }
+  50% {
+    top: -20px;
+    left: -20px;
+  }
+  100% {
+  }
+}
+@keyframes circle-slide-3 {
+  0% {
+  }
+  50% {
+    top: -20px;
+    left: -20px;
+  }
+  100% {
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes size-colors {
+  0% {
+  }
+  50% {
+    font-size: 30px;
+    color: white;
+  }
+  65% {
+    color: var(--primary);
+  }
+  80% {
+    color: var(--second);
+  }
+  99% {
+    color: var(--tert);
+    font-size: 80px;
+  }
+  100% {
+    font-size: 30px;
+  }
+}
+
+@keyframes end-loader {
+  to {
+    scale: 0;
+  }
+}

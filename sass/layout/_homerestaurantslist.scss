@@ -1,80 +1,79 @@
-@import '../utils/mixins';
-@import '../utils/mediaq';
+@import "../utils/mixins";
+@import "../utils/mediaq";
 
 .restaurants-choice {
-    background-color: var(--main-bg-color);
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .restaurants-list {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  gap: 1.5rem;
+  @include tablet-desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  & a {
+    text-decoration: none;
+    color: inherit;
     @include tablet-desktop {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+      width: 48%;
     }
-    & a {
-        text-decoration: none;
-        color: inherit;
-        @include tablet-desktop {
-            width: 48%; 
-        }
-    }
-    
+  }
 }
 
 .restaurants-cards {
-    position: relative;
-    height: 251px;
-    background-color: var(--bg-white);
-    border-radius: 15px;
-    & .badge-new {
-        position: absolute;
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--green-font);
-        background: var(--tert);
-        top: 1rem;
-        right: 1rem;
-        padding: 0.5rem 1rem;
-        border-radius: 2px;
-    }
-    & img {
-        height: 67%;
-        width: 100%;
-        border-radius: 15px 15px 0 0;
-        object-fit: cover;
-    }
+  position: relative;
+  height: 251px;
+  background-color: var(--bg-white);
+  border-radius: 15px;
+  & .badge-new {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--green-font);
+    background: var(--tert);
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+  }
+  & img {
+    height: 67%;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+  }
 }
 
 .restaurants-cards-content {
-    height: 33%;
-    width: 100%;
-    position: relative;
+  height: 33%;
+  width: 100%;
+  position: relative;
 
-    & h4 {
-        font-size: 18px;
-        font-weight: 700;
-        margin: 1rem 0 0 1rem;
-    }
-    & p {
-        font-size: 17px;
-        font-weight: 300;
-        margin: 0 0 1rem 0;
-        padding: 0.5rem 0 0rem 1rem;
-    }
-    & i {
-        font-size: 2rem;
-        position: absolute;
-        right: 1.5rem;
-        top: 0.5rem;
-    }
-    & .fa-solid {
-        @include heart-transition;
-    }
+  & h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 1rem 0 0 1rem;
+  }
+  & p {
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem 0 0rem 1rem;
+  }
+  & i {
+    font-size: 2rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 0.5rem;
+  }
+  & .fa-solid {
+    @include heart-transition;
+  }
 }

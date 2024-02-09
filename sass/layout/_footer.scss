@@ -1,57 +1,58 @@
-@import '../utils/mediaq';
+@import "../utils/mediaq";
 
 footer {
-    background-color: var(--dark-grey);
-    color: var(--button-text);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    & a {
-        color: inherit;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 400;
-        height: 1rem;
+  background-color: var(--dark-grey);
+  color: var(--button-text);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  & a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    height: 1rem;
+  }
+  & h5 {
+    font-family: "shrikhand", serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+  }
+  & i {
+    width: 12px;
+    &.fa-handshake-angle {
+      font-size: 0.9rem;
     }
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 2.5rem;
+    padding: 4rem 4rem 1rem;
     & h5 {
-        font-family: "shrikhand", serif;
-        font-size: 20px;
-        font-weight: 400;
-        margin: 0 0 1rem 0;
+      order: 1;
     }
-    & i {
-        width: 12px;
-        &.fa-handshake-angle {
-            font-size: 0.9rem;
-        }
-    }
-    @include desktop {
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: baseline;
-        gap: 2.5rem;
-        padding: 4rem 4rem 1rem;
-        & h5 {
-            order: 1;        
-        }
-    }
+  }
 }
 
 .foot-icontext {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    & p {
-        font-weight: 500;
-    }
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  & p {
+    font-weight: 500;
+  }
 }
 
-.foot-links-1,.foot-links-2{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    @include desktop {
-        flex-direction: row;
-    }
+.foot-links-1,
+.foot-links-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  @include desktop {
+    flex-direction: row;
+  }
 }
