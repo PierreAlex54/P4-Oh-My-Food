@@ -1,4 +1,4 @@
-// Les différents breakpoints pour les média-queries
+// Les différents breakpoints pour les media-queries
 @mixin tablet {
   @media screen and (min-width: 767px) and (max-width: 1040px) {
     @content;

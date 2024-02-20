@@ -85,7 +85,7 @@
 }
 
 .dish-text {
-  text-wrap: nowrap;
+  white-space: nowrap;
   overflow: hidden;
   transition: width 400ms;
   width: calc(100% - 30px);
